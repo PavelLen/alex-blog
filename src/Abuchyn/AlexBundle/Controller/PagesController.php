@@ -10,7 +10,12 @@ use Symfony\Component\HttpFoundation\Request;
 
 class PagesController extends Controller
 {
-    //Return all posts
+    /**
+     * Return all posts
+     *
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function homeAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -30,7 +35,12 @@ class PagesController extends Controller
         ));
     }
 
-    //Return all the posts from the category photo
+    /**
+     * Return all the posts from the category photo
+     *
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function photoAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -50,7 +60,12 @@ class PagesController extends Controller
         ));
     }
 
-    //Return all the posts from the category science
+    /**
+     * Return all the posts from the category science
+     *
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function scienceAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -70,11 +85,18 @@ class PagesController extends Controller
         ));
     }
 
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function aboutAction()
     {
         return $this->render('AbuchynAlexBundle:Pages:about.html.twig');
     }
 
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
     public function contactsAction(Request $request)
     {
         $enquiry = new Enquiry();
@@ -105,6 +127,12 @@ class PagesController extends Controller
         ));
     }
 
+    /**
+     * Show for Users
+     *
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function ushowAction($id)
     {
         $item = $this->getDoctrine()

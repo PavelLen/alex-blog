@@ -8,7 +8,10 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AdminController extends Controller
 {
-
+    /**
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
     public function adminAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
