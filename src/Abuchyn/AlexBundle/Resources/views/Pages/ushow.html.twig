@@ -1,0 +1,81 @@
+{% extends 'AbuchynAlexBundle::layout.html.twig' %}
+
+
+{% block header %}
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <div class="circle">
+                    <a class="navbar-brand" href="{{ path ('abuchyn_alex_homepage') }}">AB</a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ path ('abuchyn_alex_homepage') }}">Home</a></li>
+                    <li><a href="{{ path ('abuchyn_alex_science') }}">Science Blog</a></li>
+                    <li><a href="{{ path ('abuchyn_alex_photo') }}">Photo Blog</a></li>
+                    <li><a href="{{ path ('abuchyn_alex_about') }}">About</a></li>
+                    <li><a href="{{ path ('abuchyn_alex_contacts') }}">Contacts</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('{{ asset ('bundles/abuchynalex/images/home-bg.jpg') }}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>{{ item.author }}</h1>
+                        <hr class="small">
+                        <h2 class="subheading">{{ item.title }}</h2>
+                        <span class="meta">
+                            {% if item.created %}Added {{ item.created|date('j F Y g:i a') }}{% endif %}
+                            <br>
+                            {% if item.updated %}Updated {{ item.updated|date('j F Y g:i a') }}{% endif %}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+{% endblock %}
+
+
+{% block body %}
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="{{asset ('bundles/abuchynalex/images/itemImages/'~item.image~'') }}">
+                    {{ item.blog|raw }}
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <a class="btn btn-alexblog" href="{{ path('abuchyn_alex_ushow', { 'id': item.id - 1 }) }}">previous</a>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <a class="btn btn-alexblog center-block" href="{{ path ('abuchyn_alex_homepage') }}">Home</a>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <a class="btn btn-alexblog" href="{{ path('abuchyn_alex_ushow', { 'id': item.id + 1 }) }}">next</a>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    {{ item.comments }}
+                </div>
+            </div>
+        </div>
+    </article>
+{% endblock %}

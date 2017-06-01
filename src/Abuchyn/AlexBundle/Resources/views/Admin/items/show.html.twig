@@ -1,0 +1,43 @@
+{% extends 'AbuchynAlexBundle::admin_layout.htm.twig' %}
+
+{% block header_menu %}
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ path('items_show', { 'id': item.id - 1 }) }}"><i class="fa fa-backward"></i> previous</a></li>
+            <li><a href="{{ path('abuchyn_alex_admin') }}"><i class="fa fa-step-backward"></i> Back to the list</a></li>
+            <li><a href="{{ path('items_new') }}"><i class="fa fa-newspaper-o"></i> Create a new item</a></li>
+            <li><a href="{{ path('items_edit', { 'id': item.id }) }}"><i class="fa fa-edit"></i> edit</a></li>
+            <li><a href="{{ path('items_show', { 'id': item.id + 1 }) }}">next <i class="fa fa-forward"></i></a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block author %}<h1>{{ item.author }}</h1>{% endblock %}
+{% block category %} <h4 class="adminPanel">Admin</h4> {% endblock %}
+{% block info %}
+    <hr class="small">
+    <h2 class="subheading">{{ item.title }}</h2>
+    <span class="meta">
+        {% if item.created %}{{ item.created|date('j F Y g:i a') }}{% endif %}
+        <br>
+        {% if item.updated %}Updated {{ item.updated|date('j F Y g:i a') }}{% endif %}
+    </span>
+{% endblock %}
+
+
+{% block body %}
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div>
+                    {#{% if item.image %}<img src="{{ asset('bundles/abuchynalex/images/itemImages/'~item.image~'') }}">{% endif %}#}
+                    {{ item.blog|raw }}
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    {{ item.comments }}
+                </div>
+            </div>
+        </div>
+    </article>
+{% endblock %}

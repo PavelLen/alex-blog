@@ -1,0 +1,5 @@
+abuchyn_alex_admin:
+    path:     /
+    defaults: { _controller: "AbuchynAlexBundle:Admin:admin" }
+    requirements:
+                  methods:  GET|POST

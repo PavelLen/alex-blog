@@ -1,0 +1,30 @@
+{% extends 'AbuchynAlexBundle::layout.html.twig' %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 left">
+                <img class="img-responsive img-rabbit" src="{{ asset ('bundles/pbuchynmyrez/images/about.jpg') }}">
+            </div>
+
+            <div class="col-md-6 right">
+                <div id="watermark">
+                    <h2 class="page-title" text-center>О себе</h2>
+                    <div class="marker">о</div>
+                </div>
+                <div class='info'>
+                    <p>Абабагаламага</p>
+                </div>
+            </div>
+            <div class="col-md-12 center-block">
+                <div class="info">
+                    <p>А-ба-ба-га-ла-ма-га — украинское книжное издательство, специализирующееся на выпуске и переводе детской литературы на украинский, русский и английский языки.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

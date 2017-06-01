@@ -1,0 +1,33 @@
+{% extends 'AbuchynAlexBundle::admin_layout.htm.twig' %}
+
+{% block info %}
+    <h2 class="adminPanel">Item edit</h2>
+{% endblock %}
+
+{% block header_menu %}
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ path('abuchyn_alex_admin') }}"><i class="fa fa-step-backward"></i> Back to the list</a></li>
+            <li><a href="{{ path('items_show', { 'id': item.id }) }}"><i class="fa fa-file-o"></i> show</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block body %}
+
+    {{ form_start(edit_form) }}
+
+    {{ form_widget(edit_form) }}
+
+    <div class="btn-block">
+        <input class="btn btn-success" formnovalidate type="submit" value="Confirm Changes" />
+        {{ form_end(edit_form) }}
+        and
+        <a class="btn btn-default" href="{{ path('abuchyn_alex_admin') }}">Back to the list</a>
+        <hr>
+        {{ form_start(delete_form) }}
+        <input class="btn btn-danger" type="submit" value="Delete Item">
+        {{ form_end(delete_form) }}
+    </div>
+
+{% endblock %}

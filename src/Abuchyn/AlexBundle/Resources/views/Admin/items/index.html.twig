@@ -1,0 +1,33 @@
+{% extends 'AbuchynAlexBundle::layout.html.twig' %}
+
+{% block body %}
+
+    <h1>Items list</h1>
+    <div>
+        <a class="btn btn-alexblog" href="{{ path('items_new') }}"><i class="fa fa-newspaper-o"></i>Create a new item</a>
+    </div>
+    <div class="post-preview">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            {% for item in items %}
+                <a href="{{ path('items_show', { 'id': item.id }) }}">
+                    <h2 class="post-title">
+                        {{ item.title }}
+                    </h2>
+                    <h3 class="post-subtitle">
+                        Problems look mighty small from 150 miles up
+                    </h3>
+                </a>
+                <img src="{{asset ('bundles/abuchynalex'~item.image~'') }}">
+                <p class="post-meta">Posted by <a href="{{ path('abuchyn_alex_about') }}">{{ item.author }}</a> on
+                    {% if item.created %}{{ item.created|date('j F Y g:i a') }}{% endif %}
+                    <br>
+                    {% if item.updated %}Updated {{ item.updated|date('Y-m-d H:i:s') }}{% endif %}
+                </p>
+                <a class="btn btn-alexblog" href="{{ path('items_show', { 'id': item.id }) }}">show</a>
+                <a class="btn btn-alexblog" href="{{ path('items_edit', { 'id': item.id }) }}">edit</a>
+                <hr>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

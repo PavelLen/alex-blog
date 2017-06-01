@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+    </head>
+
+    <body>
+        <table>
+            Сообщение отправил {{ enquiry.name }} в {{ "now" | date("Y-m-d H:i") }}.
+        </table>
+
+        <table>Ответить: {{ enquiry.email }}</table>
+
+        <table>Тема: {{ enquiry.subject }}</table>
+
+        <table>Сообщение:</table>
+        <table>{{ enquiry.body }}</table>
+
+    </body>
+</html>

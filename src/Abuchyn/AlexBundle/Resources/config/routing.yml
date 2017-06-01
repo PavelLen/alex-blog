@@ -1,0 +1,44 @@
+abuchyn_alex_homepage:
+    path:     /
+    defaults: { _controller: AbuchynAlexBundle:Pages:home }
+    requirements:
+        methods:  GET
+
+abuchyn_alex_photo:
+    path:     /photo
+    defaults: { _controller: AbuchynAlexBundle:Pages:photo }
+    requirements:
+        methods:  GET
+
+abuchyn_alex_science:
+    path:     /science
+    defaults: { _controller: AbuchynAlexBundle:Pages:science }
+    requirements:
+        methods:  GET
+
+abuchyn_alex_about:
+    path:     /about
+    defaults: { _controller: AbuchynAlexBundle:Pages:about }
+    requirements:
+        methods:  GET
+
+abuchyn_alex_contacts:
+    path:     /contacts
+    defaults: { _controller: AbuchynAlexBundle:Pages:contacts }
+    requirements:
+        methods:  GET|POST
+
+abuchyn_alex_admin:
+    resource: "@AbuchynAlexBundle/Resources/config/routing/admin_routes.yml"
+    prefix: /admin
+
+abuchyn_alex_items:
+    resource: "@AbuchynAlexBundle/Controller/ItemsController.php"
+    type:     annotation
+
+abuchyn_alex_ushow:
+    path: /{id}
+    defaults: { _controller: AbuchynAlexBundle:Pages:ushow}
+    requirements:
+        methods: GET
+        id: \d+

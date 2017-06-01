@@ -1,0 +1,176 @@
+{%  extends '::base.html.twig' %}
+
+{% block stylesheets %}
+
+    {#styles#}
+    <link href="{{ asset('bundles/abuchynalex/css/tether.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('bundles/abuchynalex/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('bundles/abuchynalex/css/font-awesome.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('bundles/abuchynalex/css/main.css') }}" rel="stylesheet" />
+
+    {#fonts#}
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="{{ asset('bundles/abuchynalex/js/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/abuchynalex/js/tether.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/abuchynalex/js/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/abuchynalex/js/clean-blog.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/abuchynalex/js/main.js') }}" type="text/javascript"></script>
+
+{% endblock %}
+
+{% block header %}
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                {% block logo %}
+                    <div class="circle">
+                        <a class="navbar-brand" href="{{ path ('abuchyn_alex_homepage') }}">AB</a>
+                    </div>
+                {% endblock %}
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            {% block header_menu %}
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ path ('abuchyn_alex_homepage') }}">Home</a></li>
+                        <li><a href="{{ path ('abuchyn_alex_science') }}">Science Blog</a></li>
+                        <li><a href="{{ path ('abuchyn_alex_photo') }}">Photo Blog</a></li>
+                        <li><a href="{{ path ('abuchyn_alex_about') }}">About</a></li>
+                        <li><a href="{{ path ('abuchyn_alex_contacts') }}">Contacts</a></li>
+                    </ul>
+                </div>
+            {% endblock %}
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('{{ asset ('bundles/abuchynalex/images/home-bg.jpg') }}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        {% block author %}
+                            <h1>Alexey Buchyn</h1>
+                        {% endblock %}
+                        {% block category %}
+                            {#<hr class="small">
+                            <span class="subheading">Category</span>#}
+                        {% endblock %}
+                        {% block info %}
+                            {#<hr class="small">
+                            <span class="subheading">Category</span>#}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+{% endblock %}
+
+{% block body %}
+
+    <table>
+        <tr>
+            {# sorting of properties based on query components #}
+            <th>{{ knp_pagination_sortable(items, 'Id'|trans({foo:'bar'},'messages'), 'a.id' )|raw }}</th>
+            <th{% if items.isSorted('a.title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(items, 'Title', 'a.title')|raw }}</th>
+            <th>{{ knp_pagination_sortable(items, 'Author'|trans({}, 'messages'), 'a.author' )|raw }}</th>
+        </tr>
+
+        <!-- Content of the table -->
+
+    </table>
+
+    <!-- Main Content -->
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        {% for item in items %}
+            <a href="{{ path('abuchyn_alex_ushow', { 'id': item.id }) }}">
+                <h2 class="post-title">
+                    {{ item.title }}
+                </h2>
+                {#<h3 class="post-subtitle">
+                    Problems look mighty small from 150 miles up
+                </h3>#}
+            </a>
+            <img src="{{asset ('bundles/abuchynalex/images/itemImages/'~item.image) }}">
+            <p class="post-meta">Posted on
+                {% if item.created %}{{ item.created|date('j F Y g:i a') }}{% endif %}
+            </p>
+            <hr>
+        {% endfor %}
+    </div>
+
+    {# display navigation #}
+    <div class="pager">
+        {{ knp_pagination_render(items) }}
+    </div>
+
+{% endblock %}
+
+{% block footer%}
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; <a href="mailto:@gmail.com" class="site-email">Alexey Buchyn</a> Website 2017 </p>
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="  search-query form-control" placeholder="Search" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-danger" type="button">
+                                    <span class=" glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}

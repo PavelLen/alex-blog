@@ -1,0 +1,22 @@
+{% extends 'AbuchynAlexBundle::admin_layout.htm.twig' %}
+
+{% block header_menu %}
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ path('abuchyn_alex_admin') }}"><i class="fa fa-step-backward"></i> Back to the list</a></li>
+        </ul>
+    </div>
+{% endblock %}
+
+{% block category %}
+    <span class="subheading"><h2 class="adminPanel">Item creation</h2></span>
+{% endblock %}
+
+{% block body %}
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input class="btn btn-alexblog" type="submit" value="Create" />
+    {{ form_end(form) }}
+
+{% endblock %}

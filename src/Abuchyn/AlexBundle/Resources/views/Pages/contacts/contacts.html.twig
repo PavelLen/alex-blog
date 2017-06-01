@@ -1,0 +1,36 @@
+{% extends 'AbuchynAlexBundle::layout.html.twig' %}
+
+{% block title %}Contacts{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 left">
+                <div id="watermark">
+                    <h2 class="page-title" text-center>Контакты</h2>
+                    <div class="marker">к</div>
+                </div>
+                <!-- form -->
+                <form class="form" method="post" novalidate>
+                    {% for flashMessage in app.session.flashbag.get('abuchyn-notice') %}
+                        <div class="abuchyn-notice">
+                            {{ flashMessage }}
+                        </div>
+                    {% endfor %}
+                    {{ form_widget(form) }}
+                    <button type="submit" class="btn btn-alexblog submit">Отправить сообщение</button>
+                </form>
+            </div>
+            <div class="col-md-6 right">
+                <p class='subtitle'>
+                    Алексей Бучин
+                    <br>
+                    <a href="mailto:@gmail.com" class="site-email">@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

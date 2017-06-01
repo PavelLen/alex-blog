@@ -1,0 +1,3 @@
+abuchyn_alex:
+    resource: "@AbuchynAlexBundle/Resources/config/routing.yml"
+    prefix:   /
