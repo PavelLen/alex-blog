@@ -84,20 +84,20 @@
 
 {% block body %}
 
-    <table>
-        <tr>
-            {# sorting of properties based on query components #}
-            <th>{{ knp_pagination_sortable(items, 'Id'|trans({foo:'bar'},'messages'), 'a.id' )|raw }}</th>
-            <th{% if items.isSorted('a.title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(items, 'Title', 'a.title')|raw }}</th>
-            <th>{{ knp_pagination_sortable(items, 'Author'|trans({}, 'messages'), 'a.author' )|raw }}</th>
-        </tr>
-
-        <!-- Content of the table -->
-
-    </table>
-
     <!-- Main Content -->
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="dropdown">
+            <button class="btn btn-alexblog dropdown-toggle" type="button"data-toggle="dropdown">
+                Отсортировать
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu btn-alexblog">
+                <li>{{ knp_pagination_sortable(items, 'Title', 'a.title')|raw }}</li>
+                <li>{{ knp_pagination_sortable(items, 'Author', 'a.author' )|raw }}</li>
+                <li>{{ knp_pagination_sortable(items, 'Created', 'a.created' )}}</li>
+            </ul>
+        </div>
+
         {% for item in items %}
             <a href="{{ path('abuchyn_alex_ushow', { 'id': item.id }) }}">
                 <h2 class="post-title">

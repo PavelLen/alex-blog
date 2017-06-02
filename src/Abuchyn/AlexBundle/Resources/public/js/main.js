@@ -7,13 +7,10 @@ $(document).ready(function () {
     });
 
     /*form validator*/
-    $('.newPost, #logon').each(function(){
+    $('.form').each(function(){
         // Объявляем переменные (форма и кнопка отправки)
         var form = $(this),
-            btn = form.find('.btn_submit');
-
-        // Добавляем каждому проверяемому полю, указание что поле пустое
-        form.find('.addImg').addClass('empty_field');
+            btn = form.find('.submit');
 
         // Функция проверки полей формы
         function checkInput(){
