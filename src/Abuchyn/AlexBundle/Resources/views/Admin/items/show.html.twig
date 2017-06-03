@@ -34,9 +34,13 @@
                     {#{% if item.image %}<img src="{{ asset('bundles/abuchynalex/images/itemImages/'~item.image~'') }}">{% endif %}#}
                     {{ item.blog|raw }}
                 </div>
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    {{ item.comments }}
+                <div class="col-xs-6 col-md-4">
+                    <a class="btn btn-alexblog" href="{{ path('abuchyn_alex_admin') }}">
+                        <i class="fa fa-step-backward"></i> Back to the list</a>
                 </div>
+              {#  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    {{ item.comments }}
+                </div>#}
             </div>
         </div>
     </article>
