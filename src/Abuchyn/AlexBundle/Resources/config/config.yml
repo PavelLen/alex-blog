@@ -3,4 +3,4 @@ parameters:
     abuchyn_alex.emails.contacts_email: abuchyn@gmail.com
 
     # Default path for upload images
-    images_directory: '%kernel.root_dir%/../web/bundles/abuchynalex/images/itemImages'
+    images_directory: '%kernel.root_dir%/../web/uploads'

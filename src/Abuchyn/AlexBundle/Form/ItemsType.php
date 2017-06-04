@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class ItemsType extends AbstractType
 {
@@ -19,7 +20,6 @@ class ItemsType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, ['label' => false, 'attr' => ['placeholder' => 'Тема']])
-
             ->add('image', FileType::class,
                 [
                     'label' => 'Фото заголовка',
@@ -30,7 +30,6 @@ class ItemsType extends AbstractType
                         ],
                     'data_class' => null
                 ])
-
             ->add('author', TextType::class,
                 [
                     'label' => false,
@@ -40,12 +39,16 @@ class ItemsType extends AbstractType
                             'Value' => 'Alexey Buchyn'
                         ]
                 ])
-
-            ->add('blog', CKEditorType::class,
-                [
-                    'label' => false,
-                ])
-
+            ->add('blog', CKEditorType::class, [
+                'label' => false,
+                'config' => [
+                    'filebrowserBrowseRoute' => 'elfinder',
+                    'filebrowserBrowseRouteParameters' => [
+                        'instance' => 'default',
+                        'homeFolder' => ''
+                    ]
+                ],
+            ])
             ->add('tags', TextType::class,
                 [
                     'label' => false,
@@ -55,7 +58,6 @@ class ItemsType extends AbstractType
                         ],
                     'data_class' => null
                 ])
-
             ->add('category', ChoiceType::class,
                 [
                     'label' => false,
@@ -69,7 +71,7 @@ class ItemsType extends AbstractType
                         ]
                 ]);
     }
-    
+
     /**
      * {@inheritdoc}
      */
