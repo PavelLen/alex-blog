@@ -3,6 +3,7 @@
 namespace Abuchyn\AlexBundle\Controller;
 
 use Abuchyn\AlexBundle\Entity\Items;
+use Abuchyn\AlexBundle\Form\ItemsType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -25,7 +26,7 @@ class ItemsController extends Controller
     public function newAction(Request $request)
     {
         $item = new Items();
-        $form = $this->createForm('Abuchyn\AlexBundle\Form\ItemsType', $item);
+        $form = $this->createForm(ItemsType::class, $item);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

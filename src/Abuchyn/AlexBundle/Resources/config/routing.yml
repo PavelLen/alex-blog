@@ -42,3 +42,12 @@ abuchyn_alex_ushow:
     requirements:
         methods: GET
         id: \d+
+
+login:
+    path: /login
+    defaults: { _controller: "AbuchynAlexBundle:Security:login" }
+    requirements:
+        methods:  GET|POST
+
+logout:
+    path: /logout

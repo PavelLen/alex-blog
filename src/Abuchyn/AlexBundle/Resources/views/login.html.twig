@@ -1,0 +1,24 @@
+{% extends 'AbuchynAlexBundle::layout.html.twig' %}
+
+{% block title %}Login page{% endblock %}
+
+{% block body %}
+
+    <div class = "container">
+        <div class="wrapper col-md-4">
+            <form action="{{ path('login') }}" method="post" class="form-signin">
+                <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
+                <hr class="colorgraph"><br>
+
+                <div class="form-group{% if error %} has-error{% endif %}">
+                    <input type="text" class="form-control" name="_username" value="{{ lastUserName }}" placeholder="Username" required="" autofocus="" />
+                    {% if error %}<span class="help-block">{{ error.messageKey|trans(error.messageData, 'security') }}</span>{% endif %}
+                    <input type="password" class="form-control" name="_password" placeholder="Password" required=""/>
+                </div>
+
+                <button class="btn btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
