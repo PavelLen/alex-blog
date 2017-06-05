@@ -4,19 +4,19 @@
 
 {% block body %}
 
-    <div class = "container">
-        <div class="wrapper col-md-4">
+    <div class = "row">
+        <div class="col-md-2 col-md-offset-5">
             <form action="{{ path('login') }}" method="post" class="form-signin">
-                <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
-                <hr class="colorgraph"><br>
+                <h3 class="text-center">Welcome Back! <br> Please Sign In</h3>
+                <div class="col-xs-12"><hr></div>
 
-                <div class="form-group{% if error %} has-error{% endif %}">
+                <div class="form-group {% if error %} has-error{% endif %}">
                     <input type="text" class="form-control" name="_username" value="{{ lastUserName }}" placeholder="Username" required="" autofocus="" />
                     {% if error %}<span class="help-block">{{ error.messageKey|trans(error.messageData, 'security') }}</span>{% endif %}
                     <input type="password" class="form-control" name="_password" placeholder="Password" required=""/>
                 </div>
 
-                <button class="btn btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>
+                <button class="btn btn-alexblog submit col-md-offset-7"  name="Submit" value="Login" type="Submit">Login</button>
             </form>
         </div>
     </div>

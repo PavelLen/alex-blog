@@ -360,6 +360,10 @@ footer .copyright {
     color: white;
 }
 
+.pager, .pagination {
+    margin: inherit;
+}
+
 .pager li > a,
 .pager li > span {
     color: #0f0f0f;

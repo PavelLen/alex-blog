@@ -95,12 +95,18 @@ swiftmailer:
 # CK Editor
 ivory_ck_editor:
     default_config: default
+    plugins:
+        youtube:
+            path:     "/bundles/abuchynalex/plugins/ckeditor/youtube/"
+            filename: "plugin.js"
     configs:
         default:
-            toolbar: 'full'
+            toolbar: full
+            language: ru
             uiColor: '#DCDCDC'
             filebrowserBrowseRoute: elfinder
             filebrowserBrowseRouteParameters: []
+            extraPlugins: "youtube"
     toolbars:
         items:
             full.about: []
@@ -109,7 +115,7 @@ ivory_ck_editor:
             full.styles: ['Format', 'FontSize']
             full.insert: []
             full.links: []
-            full.editing: ['Find', 'Replace', '-', 'SelectAll', '-', 'Link', 'Unlink', '-','Image', 'Flash', 'Table', 'HorizontalRule', 'SpecialChar', 'Smiley']
+            full.editing: ['Find', 'Replace', '-', 'SelectAll', '-', 'Link', 'Unlink', '-','Image',  'Youtube', 'Flash', 'Table', 'HorizontalRule', 'SpecialChar', 'Smiley']
 
 # KMP Paginator
 knp_paginator:
