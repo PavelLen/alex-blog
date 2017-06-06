@@ -64,13 +64,6 @@ class Items
     private $category;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="comments", type="string", length=255, nullable=true)
-     */
-    private $comments;
-
-    /**
      * @var \DateTime
      *
      * @ORM\Column(name="created", type="datetime")
@@ -212,30 +205,6 @@ class Items
     public function getTags()
     {
         return $this->tags;
-    }
-
-    /**
-     * Set comments
-     *
-     * @param string $comments
-     *
-     * @return Items
-     */
-    public function setComments($comments)
-    {
-        $this->comments = $comments;
-
-        return $this;
-    }
-
-    /**
-     * Get comments
-     *
-     * @return string
-     */
-    public function getComments()
-    {
-        return $this->comments;
     }
 
     /**

@@ -87,7 +87,7 @@
     <!-- Main Content -->
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="col-md-12">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="dropdown">
                     <button class="btn btn-alexblog dropdown-toggle" type="button"data-toggle="dropdown">
                         Sort by
@@ -100,7 +100,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="pager">
                     {{ knp_pagination_render(items) }}
                 </div>
@@ -108,11 +108,12 @@
         </div>
         <div class="col-xs-12"><hr></div>
 
-        {% for item in items %}
-            <div class="row">
+        <div class="row">
+            {% for item in items %}
                 <div class="col-xs-12 col-sm-3 col-md-3">
-                    <img src="{{asset ('bundles/abuchynalex/images/itemImages/'~item.image) }}" class="img-responsive img-box img-thumbnail">
+                    <img src="{{asset ('uploads/title_images/'~item.image) }}" class="img-responsive img-box img-thumbnail">
                 </div>
+
                 <div class="col-xs-12 col-sm-9 col-md-9">
                     <div class="list-group">
                         <div class="list-group-item">
@@ -125,7 +126,8 @@
                                 </h3>#}
                             </a>
                             <div class="row-picture">
-                                <img class="circle img-thumbnail img-box" src="{{ asset ('bundles/abuchynalex/images/avatars/noavatar.jpg') }}" alt="avatar">
+                                <img class="circle img-thumbnail img-box"
+                                     src="{{ asset ('bundles/abuchynalex/images/avatars/noavatar.jpg') }}" alt="avatar">
                             </div>
                             <div class="row-content">
                                 <div class="list-group-item-heading">
@@ -135,19 +137,24 @@
                                 </div>
                                 <div class="list-group-item-heading">
                                     <small>
-                                       {% if item.created %}<i class="fa fa-pencil"></i>    {{ item.created|date('j F Y g:i a') }}{% endif %}
+                                       {% if item.created %}
+                                           <i class="fa fa-pencil"></i> {{ item.created|date('j F Y g:i a') }}
+                                       {% endif %}
                                     </small>
                                 </div>
                                 <small>
-                                    {% if item.updated %}<i class="fa fa-refresh"></i> {{ item.updated|date('j F Y g:i a') }}{% endif %}
+                                    {% if item.updated %}
+                                        <i class="fa fa-refresh"></i>  {{ item.updated|date('j F Y g:i a') }}
+                                    {% endif %}
                                 </small>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xs-12"><hr></div>
-        {% endfor %}
+
+                <div class="col-xs-12"><hr></div>
+            {% endfor %}
+        </div>
     </div>
 
     {# display navigation #}
@@ -186,7 +193,9 @@
                 </a>
             </li>
         </ul>
+
         <p class="copyright text-muted">Copyright &copy; <a href="mailto:@gmail.com" class="site-email">Alexey Buchyn</a> Website 2017 </p>
+
         <div id="custom-search-input">
             <div class="input-group col-md-12">
                 <input type="text" class="  search-query form-control" placeholder="Search" />

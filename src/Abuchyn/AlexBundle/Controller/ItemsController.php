@@ -3,6 +3,7 @@
 namespace Abuchyn\AlexBundle\Controller;
 
 use Abuchyn\AlexBundle\Entity\Items;
+use Abuchyn\AlexBundle\File\ImageResize;
 use Abuchyn\AlexBundle\Form\ItemsType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -35,19 +36,24 @@ class ItemsController extends Controller
 
             /** @var UploadedFile $file */
             $file = $item->getImage();
+            $imageTmpPath = $file->getPathname(); //image path in bufer
+            $imageExtentions = ['jpg', 'jpeg', 'png', 'gif']; //default extentions
+            $imageExtention = $file->getClientOriginalExtension();
+            if (!in_array($imageExtention, $imageExtentions)) {
+                echo 'The file extension is not valid!';
+            } else {
+                new ImageResize($imageTmpPath, $imageExtention);
+                $fileName = md5(uniqid()) . '.' . 'jpeg';
+                // Move the file to the directory where images are stored
+                $file->move(
+                    $this->getParameter('images_directory'),
+                    $fileName
+                );
 
-            // Generate a unique name for the file before saving it
-            $fileName = md5(uniqid()).'.'.$file->guessExtension();
-
-            // Move the file to the directory where images are stored
-            $file->move(
-                $this->getParameter('images_directory'),
-                $fileName
-            );
-
-            // Update the 'image' property
-            // instead of its contents
-            $item->setImage($fileName);
+                // Update the 'image' property
+                // instead of its contents
+                $item->setImage($fileName);
+            }
 
             $em->persist($item);
             $em->flush();
@@ -102,21 +108,27 @@ class ItemsController extends Controller
             $item->setUpdated(new \DateTime());
 
             if (!is_null($item->getImage())){
+
                 /** @var UploadedFile $file */
                 $file = $item->getImage();
+                $imageTmpPath = $file->getPathname(); //image path in bufer
+                $imageExtentions = ['jpg', 'jpeg', 'png', 'gif']; //default extentions
+                $imageExtention = $file->getClientOriginalExtension();
+                if (!in_array($imageExtention, $imageExtentions)) {
+                    echo 'The file extension is not valid!';
+                } else {
+                    new ImageResize($imageTmpPath, $imageExtention);
+                    $fileName = md5(uniqid()) . '.' . 'jpeg';
+                    // Move the file to the directory where images are stored
+                    $file->move(
+                        $this->getParameter('images_directory'),
+                        $fileName
+                    );
 
-                // Generate a unique name for the file before saving it
-                $fileName = md5(uniqid()).'.'.$file->guessExtension();
-
-                // Move the file to the directory where images are stored
-                $file->move(
-                    $this->getParameter('images_directory'),
-                    $fileName
-                );
-
-                // Update the 'image' property
-                // instead of its contents
-                $item->setImage($fileName);
+                    // Update the 'image' property
+                    // instead of its contents
+                    $item->setImage($fileName);
+                }
             } else {
                 $item->setImage($oldImg);
             }

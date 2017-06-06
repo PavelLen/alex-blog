@@ -15,58 +15,77 @@
 
 {% block body %}
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-    <div class="col-md-12">
-        <div class="col-md-4">
-            <div class="dropdown">
-                <button class="btn btn-alexblog dropdown-toggle" type="button"data-toggle="dropdown">
-                    Отсортировать
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu btn-alexblog">
-                    <li>{{ knp_pagination_sortable(items, 'Title', 'a.title')|raw }}</li>
-                    <li>{{ knp_pagination_sortable(items, 'Author', 'a.author' )|raw }}</li>
-                    <li>{{ knp_pagination_sortable(items, 'Created', 'a.created' )}}</li>
-                </ul>
+        <div class="col-md-12">
+            <div class="col-md-3">
+                <div class="dropdown">
+                    <button class="btn btn-alexblog dropdown-toggle" type="button"data-toggle="dropdown">
+                        Sort by
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu btn-alexblog">
+                        <li>{{ knp_pagination_sortable(items, 'Title', 'a.title')|raw }}</li>
+                        <li>{{ knp_pagination_sortable(items, 'Author', 'a.author' )|raw }}</li>
+                        <li>{{ knp_pagination_sortable(items, 'Created', 'a.created' )}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="pager">
+                    {{ knp_pagination_render(items) }}
+                </div>
             </div>
         </div>
-        <div class="col-md-8">
-            <div class="pager">
-                {{ knp_pagination_render(items) }}
-            </div>
+        <div class="col-xs-12"><hr></div>
+
+        {# list items #}
+        <div class="row">
+            {% for item in items %}
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <img src="{{asset ('uploads/title_images/'~item.image) }}" class="img-responsive img-box img-thumbnail">
+                </div>
+
+                <div class="col-xs-12 col-sm-9 col-md-9">
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <a href="{{ path('items_show', { 'id': item.id }) }}">
+                                <h4>
+                                    {{ item.title }}
+                                </h4>
+                                {#<h3 class="post-subtitle">
+                                    Problems look mighty small from 150 miles up
+                                </h3>#}
+                            </a>
+                            <div class="row-picture">
+                                <img class="circle img-thumbnail img-box" src="{{ asset ('bundles/abuchynalex/images/avatars/noavatar.jpg') }}" alt="avatar">
+                            </div>
+                            <div class="row-content">
+                                <div class="list-group-item-heading">
+                                    <small>
+                                        <a href="{{ path('abuchyn_alex_about') }}">{{ item.author }}</a>
+                                    </small>
+                                </div>
+                                <div class="list-group-item-heading">
+                                    <small>
+                                        {% if item.created %}<i class="fa fa-pencil"></i>    {{ item.created|date('j F Y g:i a') }}{% endif %}
+                                    </small>
+                                </div>
+                                <small>
+                                    {% if item.updated %}<i class="fa fa-refresh"></i> {{ item.updated|date('j F Y g:i a') }}{% endif %}
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-alexblog" href="{{ path('items_show', { 'id': item.id }) }}">show</a>
+                    <a class="btn btn-alexblog" href="{{ path('items_edit', { 'id': item.id }) }}">edit</a>
+                </div>
+
+                <div class="col-xs-12"><hr></div>
+            {% endfor %}
         </div>
     </div>
 
-    <div class="col-xs-12"><hr></div>
-
-    <div class="row">
-        <div class="navbar-fixed-right">
-        </div>
-        <div class="post-preview">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                {% for item in items %}
-                    <a href="{{ path('items_show', { 'id': item.id }) }}">
-                        <h2 class="post-title">
-                            {{ item.title }}
-                        </h2>
-                        {#<h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>#}
-                    </a>
-                    <img src="{{asset ('bundles/abuchynalex/images/itemImages/'~item.image) }}">
-                    <p class="post-meta">Posted by <a href="{{ path('abuchyn_alex_about') }}">{{ item.author }}</a> on
-                        {% if item.created %}{{ item.created|date('j F Y g:i a') }}{% endif %}
-                        <br>
-                        {% if item.updated %}Updated {{ item.updated|date('Y-m-d H:i:s') }}{% endif %}
-                    </p>
-                    <a class="btn btn-alexblog" href="{{ path('items_show', { 'id': item.id }) }}">show</a>
-                    <a class="btn btn-alexblog" href="{{ path('items_edit', { 'id': item.id }) }}">edit</a>
-                    <hr>
-                {% endfor %}
-            </div>
-        </div>
-        {# display navigation #}
-        <div class="pager">
-            {{ knp_pagination_render(items) }}
-        </div>
+    {# display navigation #}
+    <div class="pager">
+        {{ knp_pagination_render(items) }}
     </div>
 {% endblock %}
