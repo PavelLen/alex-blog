@@ -109,6 +109,7 @@ ivory_ck_editor:
             filebrowserBrowseRoute: elfinder
             filebrowserBrowseRouteParameters: []
             extraPlugins: "youtube"
+            youtube_related: false
     toolbars:
         items:
             full.about: []
@@ -117,7 +118,7 @@ ivory_ck_editor:
             full.styles: ['Format', 'FontSize']
             full.insert: []
             full.links: []
-            full.editing: ['Find', 'Replace', '-', 'SelectAll', '-', 'Link', 'Unlink', '-','Image',  'Youtube', 'Flash', 'Table', 'HorizontalRule', 'SpecialChar', 'Smiley']
+            full.editing: ['Find', 'Replace', '-', 'SelectAll', '-', 'Link', 'Unlink', '-','Image',  'Youtube', 'Flash', 'Table', 'HorizontalRule', '-', 'SpecialChar', 'Smiley']
 
 # KMP Paginator
 knp_paginator:
