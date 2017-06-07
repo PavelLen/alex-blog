@@ -40,6 +40,7 @@
         {# list items #}
         <div class="row">
             {% for item in items %}
+                {#title img#}
                 <div class="col-xs-12 col-sm-3 col-md-3">
                     <img src="{{asset ('uploads/title_images/'~item.image) }}" class="img-responsive img-box img-thumbnail">
                 </div>
@@ -55,20 +56,24 @@
                                     Problems look mighty small from 150 miles up
                                 </h3>#}
                             </a>
+                            {# avatar img#}
                             <div class="row-picture">
                                 <img class="circle img-thumbnail img-box" src="{{ asset ('bundles/abuchynalex/images/avatars/noavatar.jpg') }}" alt="avatar">
                             </div>
                             <div class="row-content">
+                                {# author #}
                                 <div class="list-group-item-heading">
                                     <small>
-                                        <a href="{{ path('abuchyn_alex_about') }}">{{ item.author }}</a>
+                                        {{ item.author }}
                                     </small>
                                 </div>
+                                {# create date #}
                                 <div class="list-group-item-heading">
                                     <small>
                                         {% if item.created %}<i class="fa fa-pencil"></i>    {{ item.created|date('j F Y g:i a') }}{% endif %}
                                     </small>
                                 </div>
+                                {# update date #}
                                 <small>
                                     {% if item.updated %}<i class="fa fa-refresh"></i> {{ item.updated|date('j F Y g:i a') }}{% endif %}
                                 </small>

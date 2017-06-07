@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0802320f-2a44-4b87-b913-2a8f74d04f47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/config/errors/not_found_routing.yml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/config/routing/admin_routes.yml" afterPath="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/config/routes/admin_routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Admin/admin.html.twig" afterPath="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Admin/admin.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/layout.html.twig" />
     </list>
     <ignored path="alexey-buchyn.blog.iws" />
@@ -35,18 +34,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="208" column="10" selection-start-line="167" selection-start-column="4" selection-end-line="208" selection-end-column="10" />
+            <state relative-caret-position="289">
+              <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
               <folding>
                 <element signature="e#1882#1903#0#Twig" expanded="true" />
-                <element signature="e#2398#2418#0#Twig" expanded="true" />
-                <element signature="e#2494#2512#0#Twig" expanded="true" />
-                <element signature="e#2586#2604#0#Twig" expanded="true" />
-                <element signature="e#2673#2694#0#Twig" expanded="true" />
+                <element signature="e#2399#2419#0#Twig" expanded="true" />
+                <element signature="e#2495#2513#0#Twig" expanded="true" />
+                <element signature="e#2587#2605#0#Twig" expanded="true" />
+                <element signature="e#2674#2695#0#Twig" expanded="true" />
+                <element signature="e#5662#5680#0#Twig" expanded="true" />
+                <element signature="e#6646#6664#0#Twig" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/public/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="523" column="11" selection-start-line="523" selection-start-column="1" selection-end-line="523" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,32 +65,23 @@
       <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
+            <state relative-caret-position="603">
               <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ErrorsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Controller/ErrorsController.php">
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Admin/items/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="-102">
+              <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
               <folding>
-                <element signature="e#133#190#0#PHP" expanded="true" />
-                <element signature="e#370#422#1#PHP" expanded="true" />
+                <element signature="e#597#607#0#Twig" expanded="true" />
+                <element signature="e#708#718#0#Twig" expanded="true" />
+                <element signature="e#1732#1750#0#Twig" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config_dev.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -94,14 +96,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error404.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig">
+      <file leaf-file-name="admin.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Admin/admin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="65" selection-start-line="0" selection-start-column="65" selection-end-line="0" selection-end-column="65" />
+            <state relative-caret-position="153">
+              <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
               <folding>
-                <element signature="e#78#113#0#Twig" expanded="true" />
+                <element signature="e#2146#2156#0#Twig" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,8 +172,6 @@
         <option value="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" />
         <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Controller/SecurityController.php" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/public/css/main.css" />
         <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/login.html.twig" />
         <option value="$PROJECT_DIR$/vendor/knplabs/knp-components/src/Knp/Component/Pager/Event/Subscriber/Sortable/ArraySubscriber.php" />
         <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Controller/PagesController.php" />
@@ -170,11 +180,9 @@
         <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/File/ImageResize.php" />
         <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Controller/ItemsController.php" />
         <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Admin/admin.html.twig" />
         <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Pages/ushow.html.twig" />
         <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Pages/contacts/contacts.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/config/errors/errors_routing.yml" />
         <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/config/errors/not_found_routing.yml" />
         <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/config/errors/error404_routing.yml" />
@@ -187,6 +195,10 @@
         <option value="$PROJECT_DIR$/app/config/config_dev.yml" />
         <option value="$PROJECT_DIR$/app/config/routing_dev.yml" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/public/css/main.css" />
+        <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Admin/admin.html.twig" />
+        <option value="$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/layout.html.twig" />
       </list>
     </option>
   </component>
@@ -647,6 +659,40 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alexey-buchyn.blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alexey-buchyn.blog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Abuchyn" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AlexBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -937,36 +983,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TwigBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Exception" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alexey-buchyn.blog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alexey-buchyn.blog" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -979,7 +995,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../task" />
+    <property name="last_opened_file_path" value="/var/www/pavelbuchyn.in.ua" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -1071,12 +1087,12 @@
       <workItem from="1496500024876" duration="94000" />
       <workItem from="1496503091995" duration="16754000" />
       <workItem from="1496593061768" duration="3831000" />
-      <workItem from="1496620489699" duration="25896000" />
+      <workItem from="1496620489699" duration="30026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130801000" />
+    <option name="totallyTimeSpent" value="134931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1025" extended-state="0" />
@@ -1137,51 +1153,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="177" column="5" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Repository/ItemsRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Pages/home.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/public/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="439" column="33" selection-start-line="439" selection-start-column="18" selection-end-line="439" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/uploads/b79f0daeb4276b8173b11b279c309448.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/uploads/Screenshot from 2017-01-26 22-36-15.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1290,22 +1261,11 @@
         <state relative-caret-position="1361">
           <caret line="178" column="44" selection-start-line="178" selection-start-column="44" selection-end-line="178" selection-end-column="44" />
           <folding>
-            <element signature="e#49#85#0#PHP" expanded="true" />
-            <element signature="e#2047#2059#0#PHP" expanded="true" />
-            <element signature="e#2133#2178#0#PHP" expanded="true" />
-            <element signature="e#2540#2586#0#PHP" expanded="true" />
-            <element signature="e#5798#5812#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Admin/admin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="43" column="61" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
-          <folding>
-            <element signature="e#2116#2126#0#Twig" expanded="true" />
-            <element signature="e#2969#2987#0#Twig" expanded="true" />
+            <element signature="e#49#85#0#PHP" expanded="false" />
+            <element signature="e#2047#2059#0#PHP" expanded="false" />
+            <element signature="e#2133#2178#0#PHP" expanded="false" />
+            <element signature="e#2540#2586#0#PHP" expanded="false" />
+            <element signature="e#5798#5812#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1426,45 +1386,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Pages/about.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="51" />
-          <folding>
-            <element signature="e#12#47#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="208" column="10" selection-start-line="167" selection-start-column="4" selection-end-line="208" selection-end-column="10" />
-          <folding>
-            <element signature="e#1882#1903#0#Twig" expanded="true" />
-            <element signature="e#2398#2418#0#Twig" expanded="true" />
-            <element signature="e#2494#2512#0#Twig" expanded="true" />
-            <element signature="e#2586#2604#0#Twig" expanded="true" />
-            <element signature="e#2673#2694#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Controller/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="11" selection-start-line="28" selection-start-column="8" selection-end-line="30" selection-end-column="11" />
           <folding>
-            <element signature="e#49#83#0#PHP" expanded="true" />
+            <element signature="e#49#83#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Pages/contacts/contacts.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="74" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1473,16 +1401,6 @@
         <state relative-caret-position="34">
           <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Pages/errors/not_found.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="51" />
-          <folding>
-            <element signature="e#12#47#0#Twig" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1518,14 +1436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Controller/ErrorsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1545,11 +1455,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="65" selection-start-line="0" selection-start-column="65" selection-end-line="0" selection-end-column="65" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Pages/errors/not_found.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="51" />
+          <folding>
+            <element signature="e#12#47#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1561,12 +1481,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="65" selection-start-line="0" selection-start-column="65" selection-end-line="0" selection-end-column="65" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Pages/about.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="51" />
           <folding>
-            <element signature="e#78#113#0#Twig" expanded="true" />
+            <element signature="e#12#47#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Pages/contacts/contacts.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="74" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/public/js/clean-blog.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="36" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="29" column="52" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="523" column="11" selection-start-line="523" selection-start-column="1" selection-end-line="523" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Admin/items/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="e#597#607#0#Twig" expanded="true" />
+            <element signature="e#708#718#0#Twig" expanded="true" />
+            <element signature="e#1732#1750#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Admin/admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
+          <folding>
+            <element signature="e#2146#2156#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/Pages/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#47#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Abuchyn/AlexBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="68" column="24" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+          <folding>
+            <element signature="e#1882#1903#0#Twig" expanded="true" />
+            <element signature="e#2399#2419#0#Twig" expanded="true" />
+            <element signature="e#2495#2513#0#Twig" expanded="true" />
+            <element signature="e#2587#2605#0#Twig" expanded="true" />
+            <element signature="e#2674#2695#0#Twig" expanded="true" />
+            <element signature="e#5662#5680#0#Twig" expanded="true" />
+            <element signature="e#6646#6664#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -39,6 +39,7 @@
                     </div>
                 {% endblock %}
             </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             {% block header_menu %}
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -87,6 +88,7 @@
     <!-- Main Content -->
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="col-md-12">
+            {#sorting#}
             <div class="col-md-3">
                 <div class="dropdown">
                     <button class="btn btn-alexblog dropdown-toggle" type="button" data-toggle="dropdown">
@@ -100,6 +102,7 @@
                     </ul>
                 </div>
             </div>
+            {# display navigation #}
             <div class="col-md-6">
                 <div class="pager">
                     {{ knp_pagination_render(items) }}
@@ -110,6 +113,7 @@
 
         <div class="row">
             {% for item in items %}
+                {#title img#}
                 <div class="col-xs-12 col-sm-3 col-md-3">
                     <img src="{{asset ('uploads/title_images/'~item.image) }}" class="img-responsive img-box img-thumbnail">
                 </div>
@@ -117,6 +121,7 @@
                 <div class="col-xs-12 col-sm-9 col-md-9">
                     <div class="list-group">
                         <div class="list-group-item">
+                            {#title#}
                             <a href="{{ path('abuchyn_alex_ushow', { 'id': item.id }) }}">
                                 <h4>
                                     {{ item.title }}
@@ -125,16 +130,19 @@
                                     Problems look mighty small from 150 miles up
                                 </h3>#}
                             </a>
+                            {#avatar img#}
                             <div class="row-picture">
                                 <img class="circle img-thumbnail img-box"
                                      src="{{ asset ('bundles/abuchynalex/images/avatars/noavatar.jpg') }}" alt="avatar">
                             </div>
                             <div class="row-content">
+                                {#author#}
                                 <div class="list-group-item-heading">
                                     <small>
-                                        {{ item.author }}
+                                        <a href="{{ path('abuchyn_alex_about') }}">{{ item.author }}</a>
                                     </small>
                                 </div>
+                                {#create date#}
                                 <div class="list-group-item-heading">
                                     <small>
                                        {% if item.created %}
@@ -142,6 +150,7 @@
                                        {% endif %}
                                     </small>
                                 </div>
+                                {#update date#}
                                 <small>
                                     {% if item.updated %}
                                         <i class="fa fa-refresh"></i>  {{ item.updated|date('j F Y g:i a') }}
@@ -194,8 +203,10 @@
             </li>
         </ul>
 
+        {#copyright#}
         <p class="copyright text-muted">Copyright &copy; <a href="mailto:abuchyn@gmail.com" class="site-email">Alexey Buchyn</a> Website 2017 </p>
 
+        {#searching#}
         <div id="custom-search-input">
             <div class="input-group col-md-12">
                 <input type="text" class="search-query form-control" placeholder="Search" />
