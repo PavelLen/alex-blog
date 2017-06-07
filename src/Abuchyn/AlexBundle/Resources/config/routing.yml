@@ -29,7 +29,7 @@ abuchyn_alex_contacts:
         methods:  GET|POST
 
 abuchyn_alex_admin:
-    resource: "@AbuchynAlexBundle/Resources/config/routing/admin_routes.yml"
+    resource: "@AbuchynAlexBundle/Resources/config/routes/admin_routing.yml"
     prefix: /admin
 
 abuchyn_alex_items:
@@ -42,6 +42,10 @@ abuchyn_alex_ushow:
     requirements:
         methods: GET
         id: \d+
+
+abuchyn_alex_not_found:
+    resource: "@AbuchynAlexBundle/Resources/config/errors/not_found_routing.yml"
+    prefix: /not_found
 
 login:
     path: /login

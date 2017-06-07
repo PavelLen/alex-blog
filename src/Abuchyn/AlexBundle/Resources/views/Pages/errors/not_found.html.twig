@@ -1,0 +1,25 @@
+{% extends 'AbuchynAlexBundle::layout.html.twig' %}
+
+{% block body %}
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="row">
+            <h2>Nothing found</h2>
+            <p>Sorry, but nothing matched your search criteria. Please try again with some different keyword.</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+        <div id="custom-search-input">
+            <div class="input-group col-md-12">
+                <input type="text" class="search-query form-control" placeholder="Search" />
+                <span class="input-group-btn">
+                    <button class="btn btn-danger" type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
