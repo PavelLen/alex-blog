@@ -43,9 +43,9 @@ abuchyn_alex_ushow:
         methods: GET
         id: \d+
 
-abuchyn_alex_not_found:
-    resource: "@AbuchynAlexBundle/Resources/config/errors/not_found_routing.yml"
-    prefix: /not_found
+not_found:
+    resource: "@AbuchynAlexBundle/Resources/config/errors/error_routing.yml"
+    prefix: /error
 
 login:
     path: /login

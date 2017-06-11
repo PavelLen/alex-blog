@@ -1,14 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: pavellen
- * Date: 6/6/17
- * Time: 4:02 PM
- */
 
 namespace Abuchyn\AlexBundle\File;
 
-
+/**
+ * Class ImageResize
+ * @package Abuchyn\AlexBundle\File
+ */
 class ImageResize
 {
     /** @var int  */
@@ -23,10 +20,11 @@ class ImageResize
     /** @var string  */
     private $extansion;
 
+
+    private $newImg;
+
     /**
      * ImageResize constructor.
-     *
-     * You can use a constructor with a protected method "imageResize"
      * $var = new ImageResize($height, $width, $image, $extansion);
      *
      * @param $height
@@ -36,24 +34,24 @@ class ImageResize
      */
     public function __construct($image, $extension, $width = 240, $height = 320)
     {
-        $this-> imageResize(
-            $this->image = $image,
-            $this->extansion = $extension,
-            $this->width = $width,
-            $this->height = $height
-        );
+        $this->image = $image;
+        $this->extansion = $extension;
+        $this->width = $width;
+        $this->height = $height;
     }
 
     /**
-     * @param $height
-     * @param $width
      * @param $image
      * @param $extension
+     * @param $width
+     * @param $height
      * @return resource
      */
     public function imageResize($image, $extension, $width, $height)
     {
-        switch ($extension){ // узнаем тип картинки
+        $newImg = $this->newImg;
+
+        switch ($extension){ // Check type image
             case "gif":
                 $im = imagecreatefromgif($image);
                 break;
@@ -76,7 +74,7 @@ class ImageResize
             if ($height < $outH) {
                 $koeH = $outH/$height; //Calculate the coefficient for width
                 $outW = ceil($width/$koeH); //Calculate the width using the coefficient
-                $newImg = imagecreatetruecolor($outW, $height); // создаем картинку
+                $newImg = imagecreatetruecolor($outW, $height); // Create img
                 imagecopyresampled($newImg,$im,0,0,0,0,$outW,$height,imagesx($im),imagesy($im));
             } else {
                 $newImg = imagecreatetruecolor($width, $outH);
@@ -91,7 +89,7 @@ class ImageResize
             imagejpeg($newImg, $image, 100); // conversion to jpg
             imagedestroy($im);
             imagedestroy($newImg);
-            return $newImg;
         }
+        return $newImg;
     }
 }

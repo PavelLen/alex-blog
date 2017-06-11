@@ -105,7 +105,7 @@ ivory_ck_editor:
             language: ru
             uiColor: '#DCDCDC'
             font_defaultLabel: 'Old Standard TT'
-            fontSize_defaultLabel: '18px'
+            fontSize_defaultLabel: '17px'
             filebrowserBrowseRoute: elfinder
             filebrowserBrowseRouteParameters: []
             extraPlugins: "youtube"

@@ -22,6 +22,10 @@ class PagesController extends Controller
 
         $items = $em->getRepository('AbuchynAlexBundle:Items')->findBy([], ['created' => 'DESC']);
 
+        if (!$items) {
+            return $this->redirectToRoute('maintenance');
+        }
+
         /** @var $paginator Paginator */
         $paginator = $this->get('knp_paginator');
         $result = $paginator->paginate(
@@ -47,6 +51,10 @@ class PagesController extends Controller
 
         $items = $em->getRepository('AbuchynAlexBundle:Items')->findBy(['category' => 'photo_bg'], ['created' => 'DESC']);
 
+        if (!$items) {
+            return $this->redirectToRoute('maintenance');
+        }
+
         /** @var $paginator Paginator */
         $paginator = $this->get('knp_paginator');
         $result = $paginator->paginate(
@@ -71,6 +79,10 @@ class PagesController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $items = $em->getRepository('AbuchynAlexBundle:Items')->findBy(['category' => 'science_bg'], ['created' => 'DESC']);
+
+        if (!$items) {
+            return $this->redirectToRoute('maintenance');
+        }
 
         /** @var $paginator Paginator */
         $paginator = $this->get('knp_paginator');
@@ -106,8 +118,8 @@ class PagesController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $message = \Swift_Message::newInstance()
-                ->setSubject('Сообщение от pavelbuchyn.in.ua')
-                ->setFrom('no-reply@pavelbuchyn.in.ua')
+                ->setSubject('Сообщение от alexey-buchyn.blog')
+                ->setFrom('no-reply@alexey-buchyn.blog')
                 ->setTo($this->container->getParameter('abuchyn_alex.emails.contacts_email'))
                 ->addPart($this->renderView('AbuchynAlexBundle:Pages/contacts:contactEmail.html.twig',
                     array('enquiry' => $enquiry)),
@@ -140,9 +152,7 @@ class PagesController extends Controller
             ->find($id);
 
         if (!$item) {
-            throw $this->createNotFoundException(
-                'Unable to find Blog post.'
-            );
+            return $this->redirectToRoute('not_found');
         }
 
         return $this->render('AbuchynAlexBundle:Pages:ushow.html.twig', array(

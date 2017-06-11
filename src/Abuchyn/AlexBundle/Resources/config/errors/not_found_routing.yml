@@ -1,5 +1,0 @@
-not_found:
-    path:     /
-    defaults: { _controller: "AbuchynAlexBundle:Errors:notFound" }
-    requirements:
-        methods:  GET|POST

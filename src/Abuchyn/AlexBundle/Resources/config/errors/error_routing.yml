@@ -1,0 +1,11 @@
+not_found:
+    path:     /notFound
+    defaults: { _controller: "AbuchynAlexBundle:Errors:notFound" }
+    requirements:
+        methods:  GET
+
+maintenance:
+    path:     /maintenance
+    defaults: { _controller: "AbuchynAlexBundle:Errors:maintenance" }
+    requirements:
+        methods:  GET
