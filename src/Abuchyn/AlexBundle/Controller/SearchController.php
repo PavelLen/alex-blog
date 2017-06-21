@@ -38,4 +38,9 @@ class SearchController extends Controller
            'items' => $result
         ]);
     }
+
+    public function notFoundAction()
+    {
+        return $this->render('AbuchynAlexBundle:Pages/errors:not_found.html.twig');
+    }
 }

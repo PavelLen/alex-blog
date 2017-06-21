@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class ErrorsController extends Controller
 {
-    public function notFoundAction()
+    public function error404Action()
     {
         return $this->render('AbuchynAlexBundle:Pages/errors:not_found.html.twig');
     }
