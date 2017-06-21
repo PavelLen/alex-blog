@@ -13,10 +13,7 @@ class SearchController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $data = $request->query->get('mySearch');
-
-        var_dump($data); die();
-
+        $data = $request->query->get('search');
 
         $items = $em->getRepository('AbuchynAlexBundle:Items')
             ->createQueryBuilder('s')

@@ -15,10 +15,22 @@ class EnquiryType extends AbstractType
     {
 
         $builder
-            ->add('name', TextType::class, ['label' => false, 'attr' => ['placeholder' => 'Имя']])
-            ->add('email', EmailType::class, ['label' => false, 'attr' => ['placeholder' => 'Email']])
-            ->add('subject', TextType::class, ['label' => false, 'attr' => ['placeholder' => 'Тема']])
-            ->add('body', TextareaType::class, ['label' => false, 'attr' => ['placeholder' => 'Сообщение']])
+            ->add('name', TextType::class, [
+                'label' => false,
+                'attr' => ['placeholder' => 'Имя']
+            ])
+            ->add('email', EmailType::class, [
+                'label' => false,
+                'attr' => ['placeholder' => 'Email']
+            ])
+            ->add('subject', TextType::class, [
+                'label' => false,
+                'attr' => ['placeholder' => 'Тема']
+            ])
+            ->add('body', TextareaType::class, [
+                'label' => false,
+                'attr' => ['placeholder' => 'Сообщение']
+            ])
         ;
 
     }

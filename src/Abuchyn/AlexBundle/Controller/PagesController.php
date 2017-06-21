@@ -18,6 +18,11 @@ class PagesController extends Controller
      */
     public function homeAction(Request $request)
     {
+        $data = $request->request->get('data');
+        if (!is_null($data)) {
+            var_dump($data); die();
+        }
+
         $em = $this->getDoctrine()->getManager();
 
         $items = $em->getRepository('AbuchynAlexBundle:Items')->findBy([], ['created' => 'DESC']);
@@ -92,9 +97,9 @@ class PagesController extends Controller
             $request->query->getInt('limit', 5)
         );
 
-        return $this->render('AbuchynAlexBundle:Pages:science.html.twig', array(
+        return $this->render('AbuchynAlexBundle:Pages:science.html.twig', [
             'items' => $result,
-        ));
+        ]);
     }
 
     /**
@@ -134,9 +139,9 @@ class PagesController extends Controller
             return $this->redirect($this->generateUrl('abuchyn_alex_contacts'));
         }
 
-        return $this->render('AbuchynAlexBundle:Pages/contacts:contacts.html.twig', array(
-            'form' => $form->createView()
-        ));
+        return $this->render('AbuchynAlexBundle:Pages/contacts:contacts.html.twig', [
+            'form' => $form->createView(),
+        ]);
     }
 
     /**
@@ -155,8 +160,8 @@ class PagesController extends Controller
             return $this->redirectToRoute('not_found');
         }
 
-        return $this->render('AbuchynAlexBundle:Pages:ushow.html.twig', array(
+        return $this->render('AbuchynAlexBundle:Pages:ushow.html.twig', [
             'item'      => $item,
-        ));
+        ]);
     }
 }

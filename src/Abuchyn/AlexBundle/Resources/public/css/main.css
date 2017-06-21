@@ -487,6 +487,57 @@ i.fa.fa::before {
     border-color: #bb9e7d;
 }
 
+.btn-sort-alexblog{
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 50px 100px 50px 100px !important;
+}
+
+.btn-sort-alexblog:focus {
+    outline:none !important;
+}
+
+.sort-alexblog {
+    margin: inherit;
+}
+
+.btn-sort-alexblog,
+.sort-alexblog li > a,
+.sort-alexblog li > span {
+    color: #0f0f0f;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 50px 100px 50px 100px !important;
+    margin: 0 5px;
+}
+.sort-alexblog li > a:hover,
+.sort-alexblog li > a:focus {
+    color: white;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+}
+.sort-alexblog .disabled > a,
+.sort-alexblog .disabled > a:hover,
+.sort-alexblog .disabled > a:focus,
+.sort-alexblog .disabled > span {
+    color: white;
+    background-color: lightgray;
+    cursor: not-allowed;
+}
+
+.sort-alexblog .active > span,
+.sort-alexblog .active > span:hover,
+.sort-alexblog .active > span:focus {
+    color: black;
+    background-color: white;
+    border: 1px dashed black;
+}
+
+
 .back{
     width: 170px;
     font-family: 'Old Standard TT', serif;
@@ -571,6 +622,10 @@ i.fa.fa::before {
     -moz-border-radius: 3px;
     border-radius: 3px;
     color:#D9230F;
+}
+
+#custom-search-input button:focus{
+    outline:none !important;
 }
 
 .search-query:focus + button {

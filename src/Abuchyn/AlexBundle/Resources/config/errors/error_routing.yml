@@ -1,5 +1,5 @@
 not_found:
-    path:     /notFound
+    path:     /not_found
     defaults: { _controller: "AbuchynAlexBundle:Errors:notFound" }
     requirements:
         methods:  GET

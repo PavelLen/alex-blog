@@ -60,26 +60,26 @@
 {% endblock %}
 
 {% block body %}
-
     <!-- Main Content -->
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="col-md-12">
             {#sorting#}
-            <div class="col-md-3">
-                <div class="dropdown">
-                    <button class="btn btn-alexblog dropdown-toggle" type="button" data-toggle="dropdown">
+            <div class="col-md-2">
+                <div class="dropdown sort-alexblog">
+                    <button class="btn btn-sort-alexblog dropdown-toggle" type="button" data-toggle="dropdown">
                         Sort by
                         <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu btn-alexblog">
+                    <ul class="dropdown-menu">
                         <li>{{ knp_pagination_sortable(items, 'Title', 'a.title')|raw }}</li>
                         <li>{{ knp_pagination_sortable(items, 'Author', 'a.author' )|raw }}</li>
-                        <li>{{ knp_pagination_sortable(items, 'Created', 'a.created' )}}</li>
+                        {# NOT WORK :( #}
+                        {#<li>{{ knp_pagination_sortable(items, 'Created', 'a.created' )}}</li>#}
                     </ul>
                 </div>
             </div>
             {# display navigation #}
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="pager">
                     {{ knp_pagination_render(items) }}
                 </div>
@@ -181,17 +181,19 @@
 
         {#copyright#}
         <p class="copyright text-muted">Copyright &copy; <a href="mailto:abuchyn@gmail.com" class="site-email">Alexey Buchyn</a> Website 2017 </p>
-
-        {#searching#}
-        <div id="custom-search-input">
-            <div class="input-group col-md-12">
-                <input type="text" class="search-query form-control" placeholder="Search" />
-                <span class="input-group-btn">
-                    <button class="btn btn-danger" type="button">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                </span>
-            </div>
-        </div>
+        {% block search %}
+            <form class="mySearch" action="{{ path('my_search') }}" method="get">
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="search-query form-control" name="search" placeholder="Search" />
+                        <span class="input-group-btn">
+                            <button id='submit_search' class="btn btn-danger" type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        {% endblock %}
     </div>
 {% endblock %}

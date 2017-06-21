@@ -9,7 +9,6 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class ItemsType extends AbstractType
 {
@@ -20,25 +19,21 @@ class ItemsType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, ['label' => false, 'attr' => ['placeholder' => 'Тема']])
-            ->add('image', FileType::class,
-                [
-                    'label' => 'Фото заголовка',
-                    'attr' =>
-                        [
-                            'placeholder' => 'Статья',
-                            'accept' => 'image/*'
-                        ],
-                    'data_class' => null
-                ])
-            ->add('author', TextType::class,
-                [
-                    'label' => false,
-                    'attr' =>
-                        [
-                            'placeholder' => 'Автор',
-                            'Value' => 'Alexey Buchyn'
-                        ]
-                ])
+            ->add('image', FileType::class, [
+                'label' => 'Фото заголовка',
+                'attr' => [
+                    'placeholder' => 'Статья',
+                    'accept' => 'image/*'
+                ],
+                'data_class' => null
+            ])
+            ->add('author', TextType::class, [
+                'label' => false,
+                'attr' => [
+                    'placeholder' => 'Автор',
+                    'Value' => 'Alexey Buchyn'
+                ]
+            ])
             ->add('blog', CKEditorType::class, [
                 'label' => false,
                 'config' => [
@@ -49,27 +44,22 @@ class ItemsType extends AbstractType
                     ]
                 ],
             ])
-            ->add('tags', TextType::class,
-                [
-                    'label' => false,
-                    'attr' =>
-                        [
-                            'placeholder' => 'Теги',
-                        ],
-                    'data_class' => null
-                ])
-            ->add('category', ChoiceType::class,
-                [
-                    'label' => false,
-                    'choices' =>
-                        [
-                            'Категория' =>
-                                [
-                                    'Фото' => 'photo_bg',
-                                    'Наука' => 'science_bg'
-                                ]
-                        ]
-                ]);
+            ->add('tags', TextType::class, [
+                'label' => false,
+                'attr' => [
+                        'placeholder' => 'Теги',
+                    ],
+                'data_class' => null
+            ])
+            ->add('category', ChoiceType::class, [
+                'label' => false,
+                'choices' => [
+                    'Категория' => [
+                        'Фото' => 'photo_bg',
+                        'Наука' => 'science_bg'
+                    ]
+                ]
+            ]);
     }
 
     /**
