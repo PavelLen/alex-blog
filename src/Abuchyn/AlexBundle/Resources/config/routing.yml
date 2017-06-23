@@ -43,10 +43,6 @@ abuchyn_alex_ushow:
         methods: GET
         id: \d+
 
-error:
-    resource: "@AbuchynAlexBundle/Resources/config/errors/error_routing.yml"
-    prefix: /error
-
 login:
     path: /login
     defaults: { _controller: "AbuchynAlexBundle:Security:login" }
@@ -61,9 +57,3 @@ my_search:
     defaults: { _controller: "AbuchynAlexBundle:Search:search"}
     requirements:
         methods: GET|POST
-
-not_found:
-    path: /search/not_found
-    defaults: { _controller: "AbuchynAlexBundle:Search:notFound" }
-    requirements:
-        methods:  GET

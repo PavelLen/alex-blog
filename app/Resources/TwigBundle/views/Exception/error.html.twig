@@ -1,0 +1,25 @@
+{% extends 'AbuchynAlexBundle::layout.html.twig' %}
+
+{%  block title %} 404 {% endblock %}
+
+{% block author %}{% endblock %}
+
+{% block info %}
+    <h2>An Error Occurred: {{ status_text }}</h2>
+{% endblock %}
+
+{% block body %}
+
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="row text-center">
+            <h3>Sorry, something went wrong.</h3>
+
+            <a class="btn btn-alexblog" href="{{ path ('abuchyn_alex_homepage') }}">
+                <span class="glyphicon glyphicon-home"></span>
+                Home Page
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}{% endblock %}

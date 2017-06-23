@@ -1,0 +1,35 @@
+{% extends 'AbuchynAlexBundle::layout.html.twig' %}
+
+{%  block title %} 404 {% endblock %}
+
+{% block author %}{% endblock %}
+
+{% block info %}
+    <h2>Error 404</h2>
+    Page not found
+{% endblock %}
+
+{% block body %}
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="row text-center">
+            <h3>Sorry, the page you tried cannot be found.</h3>
+
+            <p>Either something went wrong or the page  doesn't exist anymore.</p>
+
+            <a class="btn btn-alexblog" href="{{ path ('abuchyn_alex_homepage') }}">
+                <span class="glyphicon glyphicon-home"></span>
+                Home Page
+            </a>
+        </div>
+    </div>
+        {%  endif %}
+{% endblock %}
+
+{% block footer %}
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+        {% block search %}
+            {{ parent() }}
+        {% endblock %}
+    </div>
+{% endblock %}

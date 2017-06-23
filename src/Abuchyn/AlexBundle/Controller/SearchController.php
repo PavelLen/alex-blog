@@ -23,7 +23,7 @@ class SearchController extends Controller
             ->getResult();
 
         if (!$items) {
-            return $this->redirectToRoute('not_found');
+            return $this->render('AbuchynAlexBundle:Exception:not_found.html.twig');
         }
 
         /** @var $paginator Paginator */
@@ -37,10 +37,5 @@ class SearchController extends Controller
         return $this->render('AbuchynAlexBundle:Pages:search.html.twig', [
            'items' => $result
         ]);
-    }
-
-    public function notFoundAction()
-    {
-        return $this->render('AbuchynAlexBundle:Pages/errors:not_found.html.twig');
     }
 }

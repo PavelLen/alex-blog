@@ -28,7 +28,7 @@ class PagesController extends Controller
         $items = $em->getRepository('AbuchynAlexBundle:Items')->findBy([], ['created' => 'DESC']);
 
         if (!$items) {
-            return $this->redirectToRoute('maintenance');
+            return $this->render('AbuchynAlexBundle:Exception:maintenance.html.twig');
         }
 
         /** @var $paginator Paginator */
@@ -57,7 +57,7 @@ class PagesController extends Controller
         $items = $em->getRepository('AbuchynAlexBundle:Items')->findBy(['category' => 'photo_bg'], ['created' => 'DESC']);
 
         if (!$items) {
-            return $this->redirectToRoute('maintenance');
+            return $this->render('AbuchynAlexBundle:Exception:maintenance.html.twig');
         }
 
         /** @var $paginator Paginator */
@@ -86,7 +86,7 @@ class PagesController extends Controller
         $items = $em->getRepository('AbuchynAlexBundle:Items')->findBy(['category' => 'science_bg'], ['created' => 'DESC']);
 
         if (!$items) {
-            return $this->redirectToRoute('maintenance');
+            return $this->render('AbuchynAlexBundle:Exception:maintenance.html.twig');
         }
 
         /** @var $paginator Paginator */
@@ -157,7 +157,7 @@ class PagesController extends Controller
             ->find($id);
 
         if (!$item) {
-            return $this->redirectToRoute('not_found');
+            return $this->render('AbuchynAlexBundle:Exception:error404.html.twig');
         }
 
         return $this->render('AbuchynAlexBundle:Pages:ushow.html.twig', [

@@ -14,26 +14,21 @@
 {% endblock %}
 
 {% block body %}
+    <div class="pager">
+        {{ knp_pagination_render(items) }}
+    </div>
+
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="col-md-12">
-            <div class="col-md-3">
-                <div class="dropdown">
-                    <button class="btn btn-alexblog dropdown-toggle" type="button"data-toggle="dropdown">
-                        Sort by
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu btn-alexblog">
-                        <li>{{ knp_pagination_sortable(items, 'Title', 'a.title')|raw }}</li>
-                        <li>{{ knp_pagination_sortable(items, 'Author', 'a.author' )|raw }}</li>
-                        <li>{{ knp_pagination_sortable(items, 'Created', 'a.created' )}}</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="pager">
-                    {{ knp_pagination_render(items) }}
-                </div>
-            </div>
+        <div class="dropdown">
+            <button class="btn btn-sort-alexblog dropdown-toggle" type="button"data-toggle="dropdown">
+                Sort by
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu btn-alexblog">
+                <li>{{ knp_pagination_sortable(items, 'Title', 'a.title')|raw }}</li>
+                <li>{{ knp_pagination_sortable(items, 'Author', 'a.author' )|raw }}</li>
+                {#<li>{{ knp_pagination_sortable(items, 'Created', 'a.created' )}}</li>#}
+            </ul>
         </div>
         <div class="col-xs-12"><hr></div>
 
