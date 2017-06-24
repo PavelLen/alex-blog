@@ -16,3 +16,8 @@
 /web/bundles/
 web/uploads/.quarantine/
 web/uploads/avatars/
+web/uploads/.tmb
+tests
+.idea
+
+
