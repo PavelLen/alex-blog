@@ -3,6 +3,8 @@
 namespace Abuchyn\AlexBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Mapping\ClassMetadata;
 
 /**
  * Items
@@ -76,6 +78,22 @@ class Items
      * @ORM\Column(name="updated", type="datetime", nullable=true)
      */
     private $updated;
+
+    public static function loadValidatorMetadata(ClassMetadata $metadata)
+    {
+        $metadata->addPropertyConstraint('title', new NotBlank(array(
+            'message' => 'Поле "Тема" не должно быть пустым!'
+        )));
+        $metadata->addPropertyConstraint('image', new NotBlank(array(
+            'message' => 'Добавьте изображение!'
+        )));
+        $metadata->addPropertyConstraint('blog', new NotBlank(array(
+            'message' => 'Содержание не должно быть пустым!'
+        )));
+        $metadata->addPropertyConstraint('tags', new NotBlank(array(
+            'message' => 'Поле "Теги" не должно быть пустым!'
+        )));
+    }
 
     /**
      * Get id

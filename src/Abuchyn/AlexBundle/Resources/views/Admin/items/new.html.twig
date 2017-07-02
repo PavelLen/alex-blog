@@ -13,10 +13,10 @@
 {% endblock %}
 
 {% block body %}
-
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <input class="btn btn-alexblog" type="submit" value="Create" />
-    {{ form_end(form) }}
-
+    <form class="form" method="post" novalidate>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input class="btn btn-alexblog" type="submit" value="Create" />
+        {{ form_end(form) }}
+    </form>
 {% endblock %}
