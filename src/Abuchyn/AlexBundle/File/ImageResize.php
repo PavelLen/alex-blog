@@ -38,6 +38,10 @@ class ImageResize
         $this->extansion = $extension;
         $this->width = $width;
         $this->height = $height;
+
+        if ($image != '' or $extension != ''){
+            $this->imageResize($image, $extension, $width, $height);
+        }
     }
 
     /**

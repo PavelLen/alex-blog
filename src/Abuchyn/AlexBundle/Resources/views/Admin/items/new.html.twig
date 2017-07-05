@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block body %}
-    <form class="form" method="post" novalidate>
+    <form class="form" method="post" novalidate enctype="multipart/form-data">
         {{ form_start(form) }}
         {{ form_widget(form) }}
         <input class="btn btn-alexblog" type="submit" value="Create" />

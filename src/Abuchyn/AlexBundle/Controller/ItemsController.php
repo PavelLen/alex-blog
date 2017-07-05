@@ -53,10 +53,10 @@ class ItemsController extends Controller
                 // Update the 'image' property
                 // instead of its contents
                 $item->setImage($fileName);
-            }
 
-            $em->persist($item);
-            $em->flush();
+                $em->persist($item);
+                $em->flush();
+            }
 
             return $this->redirectToRoute('items_show', array('id' => $item->getId()));
         }
